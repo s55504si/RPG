@@ -109,8 +109,10 @@ plyImg.addEventListener("mousedown", () => {
 plyImg.addEventListener("mouseup", () => {
   if (flag) {
     plyImg.src = "img/playerA.png";
-    if (plyHpMax > plyHp) {
-      plyHp += plyHeal;
+    plyHp += plyHeal;
+    if (plyHp > plyHpMax) {
+      plyHp = plyHpMax;
+    }
       plySt2.textContent = "HP:" + plyHp;
     }
   }
